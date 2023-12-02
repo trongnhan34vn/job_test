@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <section>
+      <div class="courses">
+        <div class="courses-header">
+          <h2 class="courses-title">Online Courses</h2>
+          <p class="courses-description">Be yourself at our center, a place where you can encounter the body, mind and
+            spirt balancing and merging them into oneness.</p>
+        </div>
+        <div class="course-list grid">
+          <div class="grid__row" id="courses">
+          
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script>
+  let courses = [
+    {
+      name: "Vinyasa Flow Yoga",
+      image: "./assets/image/image3.png",
+      description: "Our aim is to share yoga knowledge with the students and help them relax",
+      price: "$245",
+      salePrice: "$200",
+      timeline: [
+        {
+          week: "WEEK 1",
+          description: "Get started & balance"
+        },
+        {
+          week: "WEEK 2",
+          description: "Focus on the mind"
+        },
+        {
+          week: "WEEK 3",
+          description: "Head relax yoga"
+        }
+      ]
+    },
+    {
+      name: "Vinyasa Flow Yoga",
+      image: "./assets/image/image1.png",
+      description: "Our aim is to share yoga knowledge with the students and help them relax",
+      price: "$245",
+      salePrice: "$200",
+      timeline: [
+        {
+          week: "WEEK 1",
+          description: "Get started & balance"
+        },
+        {
+          week: "WEEK 2",
+          description: "Focus on the mind"
+        },
+        {
+          week: "WEEK 3",
+          description: "Head relax yoga"
+        }
+      ]
+    },
+    {
+      name: "Vinyasa Flow Yoga",
+      image: "./assets/image/image2.png",
+      description: "Our aim is to share yoga knowledge with the students and help them relax",
+      price: "$245",
+      salePrice: "$200",
+      timeline: [
+        {
+          week: "WEEK 1",
+          description: "Get started & balance"
+        },
+        {
+          week: "WEEK 2",
+          description: "Focus on the mind"
+        },
+        {
+          week: "WEEK 3",
+          description: "Head relax yoga"
+        }
+      ]
+    },
+    {
+      name: "Vinyasa Flow Yoga",
+      image: "./assets/image/image1.png",
+      description: "Our aim is to share yoga knowledge with the students and help them relax",
+      price: "$245",
+      salePrice: "$200",
+      timeline: [
+        {
+          week: "WEEK 1",
+          description: "Get started & balance"
+        },
+        {
+          week: "WEEK 2",
+          description: "Focus on the mind"
+        },
+        {
+          week: "WEEK 3",
+          description: "Head relax yoga"
+        }
+      ]
+    }
+  ]
+
+  function showCourses() {
+    let draw = "";
+    courses.forEach((course) => {
+      draw += `
+            <div class="course-item grid__column-4">
+              <div class="course-img">
+                <img src=${course.image} alt="">
+
+              </div>
+              <div class="course-body">
+                <h4 class="course-body-name">
+                  ${course.name}
+                </h4>
+                <p class="course-body-description">
+                  ${course.description}
+                </p>
+                <div class="course-body-price">
+                  <p>${course.price}</p>
+                  <p>${course.salePrice}</p>
+                </div>
+                <div id="timeline" class="course-body-timeline">
+                  <div class="course-body-timeline-item">
+                    <p>WEEK 1</p>
+                    <p>Get started & balance</p>
+                  </div>
+                  <div class="course-body-timeline-item">
+                    <p>WEEK 2</p>
+                    <p>Focus on the mind</p>
+                  </div>
+                  <div class="course-body-timeline-item">
+                    <p>WEEK 3</p>
+                    <p>Head relax yoga</p>
+                  </div>
+                </div>
+              </div>
+            </div>      
+      `;
+      document.getElementById("courses").innerHTML = draw;
+    })
+
+  }
+  showCourses();
+</script>
+
+</html>
